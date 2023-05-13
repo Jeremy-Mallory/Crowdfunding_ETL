@@ -3,10 +3,10 @@
 
 
 CREATE TABLE "category" (
-    "category" VARCHAR   NOT NULL,
+    "category_id" VARCHAR   NOT NULL,
     "cagegory" CARCHAR   NOT NULL,
     CONSTRAINT "pk_category" PRIMARY KEY (
-        "category"
+        "category_id"
      )
 );
 
@@ -49,7 +49,7 @@ ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_contact_id" FOREIGN KEY("cont
 REFERENCES "contacts" ("contact_id");
 
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_category_id" FOREIGN KEY("category_id")
-REFERENCES "category" ("category");
+REFERENCES "category" ("category_id");
 
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_subcategory" FOREIGN KEY("subcategory")
 REFERENCES "subcategory" ("subcategory_id");
