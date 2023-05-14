@@ -43,6 +43,8 @@ CREATE TABLE "campaign" (
     "end_date" DATE   NOT NULL,
     "category_id" VARCHER   NOT NULL,
     "subcategory" VARCHAR   NOT NULL
+     CONSTRAINT "pk_contacts" PRIMARY KEY (
+        "cf_id"
 );
 
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_contact_id" FOREIGN KEY("contact_id")
