@@ -60,10 +60,9 @@ CREATE TABLE "campaign" (
     "end_date" DATE   NOT NULL,
     "category_id" VARCHAR   NOT NULL,
     "subcategory" VARCHAR   NOT NULL,
-	 CONSTRAINT "pk_campaign" PRIMARY KEY (
-        "cf_id"
-     )
-
+	CONSTRAINT "pk-campaing" PRIMARY KEY(
+	"cf_id"
+	)
 );
 
 SELECT * FROM campaign;
