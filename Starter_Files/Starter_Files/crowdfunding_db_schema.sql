@@ -1,3 +1,9 @@
+-- Create Database
+DROP DATABASE IF EXISTS crowdfunding_db;
+
+CREATE DATABASE crowdfunding_db;
+
+
 -- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
@@ -12,7 +18,6 @@ CREATE TABLE "category" (
      )
 );
 
-SELECT * FROM category;
 
 -- Check if table exists and import subcategory
 DROP TABLE IF EXISTS subcategory CASCADE;
@@ -25,7 +30,6 @@ CREATE TABLE "subcategory" (
      )
 );
 
-SELECT * FROM subcategory;
 
 -- Check if table exists and import contacts
 DROP TABLE IF EXISTS contacts CASCADE;
@@ -40,7 +44,6 @@ CREATE TABLE "contacts" (
      )
 );
 
-SELECT * FROM contacts;
 
 -- Check if table exists and import campaign
 DROP TABLE IF EXISTS campaign CASCADE;
@@ -65,7 +68,6 @@ CREATE TABLE "campaign" (
 	)
 );
 
-SELECT * FROM campaign;
 
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_contact_id" FOREIGN KEY("contact_id")
 REFERENCES "contacts" ("contact_id");
